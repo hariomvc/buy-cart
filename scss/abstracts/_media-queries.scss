@@ -56,3 +56,59 @@ Devices & Their Viewport Width, Relative Width
         @media only screen and (min-width: 112.5em) { @content };   
     }
 }
+
+//Responsive images
+.img{
+    &-large{
+        display: none;
+        visibility: hidden;
+        opacity: 0;
+        position: absolute;
+        @include responsive(sd){
+            visibility: visible;
+            opacity: 1;
+            display: inline-block;
+            position: relative;
+        }
+        @include responsive(ll){
+            visibility: visible;
+            opacity: 1;
+            display: inline-block;
+            position: relative;
+        }
+        @include responsive(lt){
+            display: none;
+            visibility: hidden;
+            opacity: 0;
+        }
+    }
+    &-medium{
+        display: none;
+        visibility: hidden;
+        opacity: 0;
+        position: absolute;
+        @include responsive(lt){
+            visibility: visible;
+            opacity: 1;
+            display: inline-block;
+            position: relative;
+        }
+        @include responsive(nm){
+            display: none;
+            visibility: hidden;
+            opacity: 0;
+        }
+    }
+    &-small{
+        display: none;
+        visibility: hidden;
+        opacity: 0;
+        position: absolute;
+        @include responsive(nm){
+            visibility: visible;
+            opacity: 1;
+            display: inline-block;
+            position: relative;
+        }
+    }
+}

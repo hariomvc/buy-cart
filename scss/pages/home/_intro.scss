@@ -1,8 +1,11 @@
 .intro{
-    background-image: url(../img/bg-img.jpg);
+    @include background(
+        "../img/bg-img-0-small.jpg",
+        "../img/bg-img-0-medium.jpg",
+        "../img/bg-img-0-large.jpg",
+        "../img/bg-img-0-xlarge.jpg"
+        );
     height: 100vh;
-    background-size: cover;
-    background-position: center;
     position: relative;
 
     &__text-box{
@@ -15,36 +18,46 @@
 }
 
 .launching-soon{
-    background-image: url(../img/bg-img3.jpg);
-    background-size: cover;
-    background-position: center;
-    padding: 2rem;
+    @include background(
+        "../img/bg-img-1-small.jpg",
+        "../img/bg-img-1-medium.jpg",
+        "../img/bg-img-1-large.jpg",
+        "../img/bg-img-1-xlarge.jpg"
+        );
 }
 
 .surprise{
-    background-image: url(../img/bg-img2.jpg);
-    background-size: cover;
-    background-position: center;
-    padding: 2rem;
+    @include background(
+        "../img/bg-img-2-small.jpg",
+        "../img/bg-img-2-medium.jpg",
+        "../img/bg-img-2-large.jpg",
+        "../img/bg-img-2-xlarge.jpg"
+        );
 }
 
 .most-bought{
-    background-image: url(../img/bg-img1.jpg);
-    background-size: cover;
-    background-position: center;
-    padding: 2rem;
+    @include background(
+        "../img/bg-img-3-small.jpg",
+        "../img/bg-img-3-medium.jpg",
+        "../img/bg-img-3-large.jpg",
+        "../img/bg-img-3-xlarge.jpg"
+        );
 }
 
 .reviews{
-    background-image: url(../img/reviews.jpg);
-    background-size: cover;
-    background-position: center;
-    padding: 2rem;
+    @include background(
+        "../img/bg-img-4-small.jpg",
+        "../img/bg-img-4-medium.jpg",
+        "../img/bg-img-4-large.jpg",
+        "../img/bg-img-4-xlarge.jpg"
+        );
 }
 
 .add-review{
-    background-image: url(../img/reviews-1.jpg);
-    background-size: cover;
-    background-position: center;
-    padding: 2rem;
+    @include background(
+        "../img/bg-img-5-small.jpg",
+        "../img/bg-img-5-medium.jpg",
+        "../img/bg-img-5-large.jpg",
+        "../img/bg-img-5-xlarge.jpg"
+        );
 }

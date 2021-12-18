@@ -1,1 +1,18 @@
-//mixins
+@mixin background ($img-s, $img-m, $img-l, $img-xl) {
+    background-image: url($img-l);
+    background-size: cover;
+    background-position: center;
+    padding: 3rem;
+
+    @include responsive(sd) {
+        background-image: url($img-xl); 
+    }
+
+    @include responsive(lt) {
+        background-image: url($img-m); 
+    }
+
+    @include responsive(nm) {
+        background-image: url($img-s); 
+    }
+}

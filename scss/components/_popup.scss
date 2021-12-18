@@ -22,8 +22,8 @@
         left: 50%;
         transform: translate(-50%, -50%);
 
-        width: 75%;
-        height: 80%;
+        width: 75vw;
+        height: 80vh;
         background-color: $color-white;
         box-shadow: 0 2rem 4rem rgba($color-black, .2);
         border-radius: 3px;
@@ -47,8 +47,49 @@
     }
 
     &__img {
-        display: block;
-        width: 80%;
+        width: 20vw;
+        height: 40vh;
+        display: none;
+        visibility: hidden;
+        opacity: 0;
+        &--large{
+            @include responsive(sd){
+                visibility: visible !important;
+                opacity: 1 !important;
+                display: inline-block !important;
+            }
+            @include responsive(ll){
+                visibility: visible !important;
+                opacity: 1 !important;
+                display: inline-block !important;
+            }
+            @include responsive(lt){
+                display: none !important;
+                visibility: hidden !important;
+                opacity: 0 !important;
+            }
+        }
+        &--medium{
+            @include responsive(lt){
+                visibility: visible !important;
+                opacity: 1 !important;
+                display: inline-block !important;
+            }
+            @include responsive(nm){
+                display: none !important;
+                visibility: hidden !important;
+                opacity: 0 !important;
+            }
+        }
+        &--small{
+            @include responsive(nm){
+                visibility: visible !important;
+                opacity: 1 !important;
+                display: inline-block !important;
+            }
+        }
+        object-fit: cover;
+        overflow: hidden;
     }
 
     &__text {
