@@ -1,0 +1,84 @@
+//Headings
+.heading{
+    &__primary{
+         &--main{
+            font-size: 5rem;
+            display: block;
+            text-transform: uppercase;
+            color: $color-grey-dark;
+            animation: moveInLeft 1s ease-in-out;
+            &:hover{
+                color: $color-grey-dark-1;
+                transform: scale(1.2);
+            }
+        }
+        &--sub{
+            font-size: 1rem;
+            display: block;
+            text-transform: uppercase;
+            color: $color-grey-dark;
+            animation: moveInRight 1s ease-in-out;
+            &:hover{
+                color: $color-grey-dark-1;
+                transform: scale(1.2);
+            }
+        }
+    }
+    &__secondary{
+        &--main{
+            text-align: center;
+            font-size: 3rem;
+            display: block;
+            text-transform: uppercase;
+            color: $color-grey-dark;
+            margin-top: 4rem;
+            &:hover{
+                color: $color-grey-dark-1;
+                transform: scale(1.2);
+            }
+        }
+        &--sub{
+            text-align: center;
+            font-size: 1rem;
+            display: block;
+            color: $color-grey-dark;
+            &:hover{
+                color: $color-grey-dark-1;
+                transform: scale(1.2);
+            }
+        }
+    }
+    &__tertiary{
+        &--main{
+            //text-align: left;
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            color: $color-grey-light;
+            &:hover{
+                color: $color-grey-light-1;
+                transform: scale(1.2);
+            }
+        }
+    }
+    
+    &__quaternery{
+        font-size: 1rem;
+        text-transform: uppercase;
+        color: $color-grey-dark; 
+
+        &--main{
+            display: block;
+            font-size: 1.2rem;
+        }
+
+        &--sub{
+            display: block;
+            font-size: 1rem;
+        }
+
+        &:hover{
+            color: $color-grey-dark-1;
+            transform: scale(1.2);
+        }
+    }
+}

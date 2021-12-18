@@ -1,0 +1,53 @@
+.nav{
+    position: fixed;
+    top: 1rem;
+    padding: 0.5rem 1rem;
+    margin: 0rem 2.5vw;
+    display: inline-block;
+    background: $color-grey-light;
+    border-radius: 200rem;
+    width: 95vw;
+    z-index: 10;
+    border: 0.1rem solid rgba($color-grey-dark, 0.8);
+
+    &__logo{
+        height: 2rem;
+        padding: auto;
+        padding-right: 2rem;
+        float: left;
+
+        &:hover{
+            transform: scale(1.2) translateX(1rem);
+        }
+    }
+    
+    &__list{
+        list-style: none;
+        //display: inline-block;
+        float: right;
+        top: auto;
+        bottom: auto;
+    }
+
+    &__item{
+        display: inline-block;
+        margin: 0.25rem;   
+        padding: 0.25rem; 
+    }    
+
+    &__link{
+       &,
+       &:link,
+       &:visited{
+        text-decoration: none; 
+        color: $color-grey-dark;
+        font-size: 1rem;
+
+        &:hover{
+            transform: scale(1.2);
+            color: $color-black;
+            font-size: 1.2rem;
+        }
+       }
+    }
+}    

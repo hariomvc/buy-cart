@@ -1,0 +1,74 @@
+.surprise{
+    &__grid{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(1, max-width);
+        align-items: space-between;
+        grid-gap: 2rem;
+        position: relative;
+        align-items: center;
+
+        @include responsive(st){
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, max-width);
+        }
+
+        @include responsive(sm){
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, max-width);
+        }
+    }
+
+    &__cell{
+        align-self: center;
+        justify-self: center;
+        border-radius: 1rem;
+        background-color: rgba($color-grey-light, 0.6);
+        padding: 1rem;
+        position: relative;
+
+        &:hover{
+            background-color: rgba($color-grey-light, 0.8);
+        }
+    }
+
+    &__img{
+        width: 80%;
+        //-webkit-clip-path: circle(50% at 50% 50%);
+        //clip-path: circle(45% at 50% 50%);
+        border-radius: 10%;
+        margin: 1rem auto;
+        display: block;
+
+        &:hover{
+            border-radius: 0;
+            transform: scale(1.1) translateY(-0.5rem);
+        }
+    }
+
+    &__detials{
+        text-align: center;
+    }
+
+    &__price{
+        &--original{
+            text-decoration: line-through;
+        }
+
+        &--discounted{
+            font-weight: bold;
+        }
+    }
+
+    &__btn{
+        opacity: 0;
+        visibility: hidden;
+        //position: absolute;
+    }
+
+    &__cell:hover &__btn{
+        opacity: 1;
+        visibility: visible;
+        position: relative;
+    }
+}

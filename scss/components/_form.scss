@@ -1,0 +1,78 @@
+.form {
+    background-color: $color-black;
+
+    &__box{
+        width: 80%;
+        padding: 1rem;
+        margin: 0.5rem auto;
+        display: block;
+        background-color: rgba($color-grey-light, 0.4); 
+        
+        form{
+            display: grid;
+            grid-template-columns: repeat(2, 45%);
+            grid-template-rows: repeat(2, max-width);
+            grid-auto-rows: max-content;
+            grid-column-gap: 10%;
+            align-items: start;
+
+            @include responsive(nm){
+                grid-template-columns: repeat(1, 100%);
+                grid-template-rows: repeat(3, max-width);
+            }
+        }
+    }
+
+    &__group:not(:last-child) {
+        margin-bottom: 2rem;
+    }
+
+    &__input {
+        font-size: 1rem;
+        font-family: inherit;
+        color: inherit;
+        padding: 1.5rem 1rem;
+        border-radius: 2px;
+        background-color: rgba($color-white, .5);
+        border: none;
+        border-bottom: 3px solid transparent;
+        width: 95%;
+        display: block;
+        transition: all .3s;
+
+        &:focus {
+            outline: none;
+            box-shadow: 0 1rem 2rem rgba($color-black, .1);
+            border-bottom: 3px solid $color-grey-dark-1;
+        }
+
+        &:focus:invalid {
+            border-bottom: 3px solid $color-grey-dark-1;
+        }
+
+        &::-webkit-input-placeholder {
+            color: $color-grey-dark-1;
+        }
+    }
+
+
+    &__label {
+        font-size: 1rem;
+        margin-left: 2rem;
+        margin-top: .7rem;
+        display: block;
+        transition: all .3s;
+    }
+
+    &__input:placeholder-shown + &__label {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-4rem);
+    }
+
+    &__group{
+        textarea{
+            size: 100%;
+        }
+    }
+}

@@ -1,0 +1,58 @@
+//Media Queries for Responsive Website.
+
+/*
+Devices & Their Viewport Width, Relative Width
+(sm)Small Mobile    <390px      24.375em
+(nm)Normal Mobile   <500px      31.25em
+(st)Small Tablet    <700px      43.75em
+(lt)Large Tablet    <900px      56.25em
+(sl)Small Laptop    <1080px     67.5em
+(ll)Large Laptop    <1376px     86em
+(sd)Small Desktop   >1376px     86em
+(ld)Large Desktop   >1800px     112.5em
+
+1em=16px (for conversions)
+*/
+
+@mixin responsive($breakpoint) {
+
+    //(sm)Small Mobile    <390px      24.375em
+    @if $breakpoint == sm {
+        @media only screen and (max-width: 24.375em) { @content };    
+    }
+
+    //(nm)Normal Mobile   <500px      31.25em
+    @if $breakpoint == nm {
+        @media only screen and (max-width: 31.25em) { @content };
+    }
+
+    //(st)Small Tablet    <700px      43.75em
+    @if $breakpoint == st {
+        @media only screen and (max-width: 43.75em) { @content };   
+    }
+
+    //(lt)Large Tablet    <900px      56.25em
+    @if $breakpoint == lt {
+        @media only screen and (max-width: 56.25em) { @content };   
+    }
+
+    //(sl)Small Laptop    <1080px     67.5em
+    @if $breakpoint == sl {
+        @media only screen and (max-width: 67.5em) { @content };   
+    }
+
+    //(ll)Large Laptop    <1376px     86em
+    @if $breakpoint == ll {
+        @media only screen and (max-width: 86em) { @content };   
+    }
+
+    //(sd)Small Desktop   >1376px     86em
+    @if $breakpoint == sd {
+        @media only screen and (min-width: 86em) { @content };   
+    }
+
+    //(ld)Large Desktop   >1800px     112.5em
+    @if $breakpoint == ld {
+        @media only screen and (min-width: 112.5em) { @content };   
+    }
+}

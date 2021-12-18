@@ -1,0 +1,65 @@
+.footer{
+    background-color: $color-grey-dark;
+    padding: 2rem 2rem;
+    display: grid;
+    grid-auto-rows: auto;
+    grid-auto-columns: auto;
+    grid-template-columns: repeat(2, 45%);//minmax(45%, min-width)
+    //grid-template-rows: repeat(autofit, max-width);
+    grid-gap: 10%;
+
+    @include responsive(nm){
+        grid-template-columns: repeat(1, 100%);
+        grid-template-rows: repeat(2, max-width);
+    }
+
+    &__link-box{
+        align-self: start;
+        border-top: $color-grey-light .2rem solid;
+    }
+    
+    &__logo{
+        height: 5rem;
+        margin: 0 auto;
+        display: block;
+
+        &:hover{
+            transform: scale(1.5);
+        }
+    }
+
+    &__list{
+        list-style: none;
+    }
+
+    &__item{
+        display: block;
+    }
+
+    &__link{
+        text-decoration: none;
+        color: $color-grey-light-1;
+
+        &:hover{
+            color: $color-white;
+        }
+    }
+
+    copyright-box{
+        display: inline-block;
+        position: relative;
+        text-align: center;
+    }
+
+    &__heading{
+        margin: .2rem auto;
+        text-align: center;
+    }
+
+    &__copyright{
+        border-top: $color-grey-light .2rem solid;
+        display: inline-block;
+        color: $color-grey-light-1;
+    }
+
+}
